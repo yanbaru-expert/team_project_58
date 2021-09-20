@@ -3,37 +3,41 @@
  *= require_self
  */
 
- @import "bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';
 
- /* 全体 */
+/* 全体 */
 
- .base-container {
-   margin: 0 auto;
-   padding: 1rem;
- }
+.base-container {
+  margin: 0 auto;
+  padding: 1rem;
+}
 
- /* max-width */
+body {
+  padding-top: 70px;
+}
 
- .mw-sm {
-   max-width: 576px;
- }
+/* max-width */
 
- .mw-md {
-   max-width: 768px;
- }
+.mw-sm {
+  max-width: 576px;
+}
 
- .mw-lg {
-   max-width: 992px;
- }
+.mw-md {
+  max-width: 768px;
+}
 
- .mw-xl {
-   max-width: 1200px;
- }
+.mw-lg {
+  max-width: 992px;
+}
 
- .alert-notice {
-   @extend .alert-success;
- }
+.mw-xl {
+  max-width: 1200px;
+}
 
- .alert-alert {
-   @extend .alert-danger;
- }
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
