@@ -24,4 +24,4 @@ end
 
 ImportCsv.text_data
 ImportCsv.movie_data
-AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password") if Rails.env.development?
+AdminUser.find_or_create_by!(email: "admin@example.com", password: "password", password_confirmation: "password") if Rails.env.development?
