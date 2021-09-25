@@ -1,4 +1,5 @@
 class Text < ApplicationRecord
+  RAILS_GENRE_LIST = %w[basic git ruby rails]
   with_options presence: true do
     validates :genre
     validates :title
