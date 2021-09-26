@@ -24,3 +24,8 @@ end
 
 ImportCsv.text_data
 ImportCsv.movie_data
+AdminUser.find_or_create_by!(email: "admin@example.com") do |adminuser|
+  adminuser.password = password
+  adminuser.password_confirmation = password
+  puts "管理ユーザーの初期データインポートに成功しました。"
+end
