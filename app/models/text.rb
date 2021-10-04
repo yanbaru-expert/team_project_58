@@ -13,4 +13,8 @@ class Text < ApplicationRecord
     rails: 4,
     php: 5
   }
+  has_many :read_progresses, -> { order(created_at: :desc) }, dependent: :destroy
+  def read_progressed_by?(user)
+    read_progresses.exists?(user_id: user.id)
+  end
 end
