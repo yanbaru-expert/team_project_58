@@ -9,7 +9,7 @@
           <a class="btn btn-secondary btn-block">読破済みにする</a>
         </object>
       </p>
-      <p class="card-text mt-3">Lv.<%= "#{movie_counter}".to_i + 1%>：<%= movie.title %></p>
+      <p class="card-text mt-3">Lv.<%= "#{movie_counter}".to_i + @movies.offset_value + 1%>：<%= movie.title %></p>
     </div>
   </div>
 </div>
