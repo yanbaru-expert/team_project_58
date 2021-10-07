@@ -1,5 +1,11 @@
 class Text < ApplicationRecord
   RAILS_GENRE_LIST = %w[basic git ruby rails]
+  PHP_GENRE_LIST = %w[php]
+
+  def self.genre_categorize(genre)
+    genre == "php" ? where(genre: PHP_GENRE_LIST) : where(genre: RAILS_GENRE_LIST)
+  end
+
   with_options presence: true do
     validates :genre
     validates :title
