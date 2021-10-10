@@ -15,11 +15,17 @@ class Movie < ApplicationRecord
     php: 5
   }
 
+  has_many :watch_progresses, dependent: :destroy
+
   def self.genre_list(genre)
     if genre == "php"
       where(genre: Movie::PHP_GENRE_LIST)
     else
       where(genre: Movie::RAILS_GENRE_LIST)
     end
+  end
+
+  def watch_progressed_by?(user)
+    watch_progresses.any? { |watch| watch.user_id == user.id }
   end
 end
