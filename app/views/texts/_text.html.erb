@@ -1,5 +1,6 @@
 <div class="col-12 col-md-6 col-lg-4">
-  <div class="card content-card border-dark mb-3">
+  <%= link_to text_path(text) do %>
+    <div class="card content-card border-dark mb-3">
       <div class="card-header p-0">
         <img loading="lazy" alt="<%= text.title %>" class="img-fluid" src="/assets/no_image.jpg" >
       </div>
@@ -12,5 +13,6 @@
         <p class="card-text mt-3"><%= text.title %></p>
         <p>【<%= text.genre.capitalize %>】</p>
       </div>
-  </div>
+    </div>
+  <% end %>
 </div>

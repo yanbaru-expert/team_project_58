@@ -3,5 +3,7 @@ class TextsController < ApplicationController
     @texts = Text.genre_categorize(params[:genre])
   end
 
-  def show; end
+  def show
+    @text = Text.find(params[:id])
+  end
 end
