@@ -3,5 +3,7 @@ class TextsController < ApplicationController
     @texts = Text.includes(:read_progresses).genre_categorize(params[:genre]).order(:created_at)
   end
 
-  def show; end
+  def show
+    @text = Text.find(params[:id])
+  end
 end
