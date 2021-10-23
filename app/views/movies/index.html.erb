@@ -1,0 +1,11 @@
+<div class="container mw-xl">
+  <div class="contents-title text-center">
+    <h1><%= movie_title %></h1>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <%= render partial: "movie", collection: @movies %>
+    </div>
+  </div>
+</div>
+<%= paginate @movies %>
